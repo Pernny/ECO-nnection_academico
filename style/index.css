@@ -33,8 +33,22 @@ body::before {
     height: 100vh;
 }
 
+.login-box-container {
+    background-color: rgba(0, 0, 0, 0.5) ; /* Efeito de fumaça */
+    backdrop-filter: blur(50px);
+    padding: 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+.login-box-background {
+    background-color: white ; /* Efeito de fumaça */
+    padding: 20px;
+    border-radius: 5px;
+    color: #fff;
+}
 .login-box {
-    background-color: rgba(0, 0, 0, 0.5); /* Efeito de fumaça */
+    background-color: rgba(0, 0, 0, 0.5) ; /* Efeito de fumaça */
+    backdrop-filter: blur(50px);
     padding: 20px;
     border-radius: 5px;
     color: #fff;
