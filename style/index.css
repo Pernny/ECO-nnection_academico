@@ -1,0 +1,69 @@
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/reciclagem-de-residuos.webp');
+    opacity: 0.3; /* Opacidade da marca d'água */
+    pointer-events: none; /* Impede que o elemento interfira com a interatividade */
+    z-index: -1;
+    background-size: contain; /* Torna a imagem responsiva */
+    background-position: center; /* Alinha o centro da imagem de marca d'água */
+}
+
+
+/* Media Query para ajustar em dispositivos móveis */
+@media (max-width: 768px) {
+    body::before {
+        background-size: 325%; /* Ajusta o tamanho da imagem de marca d'água em dispositivos móveis */
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-box {
+    background-color: rgba(0, 0, 0, 0.5); /* Efeito de fumaça */
+    padding: 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+h2 {
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    background-color: #A6FA7E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #A6FA7E;
+    width: 100%;
+}
+
