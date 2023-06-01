@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+:root {
+    --fonte-primaria: 'Roboto', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -32,7 +36,7 @@ body {
 
 .cabecalho__nav__nome {
     font-size: 12px;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--fonte-primaria);
 }
 
 .conteudo {
@@ -44,7 +48,7 @@ body {
 }
 
 .conteudo__titulo {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--fonte-primaria);
     font-size: 20px;
     padding-top: 10%;
 }
@@ -59,7 +63,7 @@ body {
 }
 
 .conteudo__cadastro-entrega__texto {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--fonte-primaria);
     font-size: 100%;
     text-align: center;
 }
@@ -83,7 +87,7 @@ body {
 }
 
 .conteudo__cadastro-busca__texto {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--fonte-primaria);
     font-size: 100%;
     text-align: center;
 }
