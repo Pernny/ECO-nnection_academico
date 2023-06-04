@@ -5,31 +5,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard 3</title>
-    <link rel="stylesheet" href="style/dashboard3.css">
+    <link rel="stylesheet" href="../../bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style/newCollect.module.css">
+    <link rel="stylesheet" href="../../style/global.css">
+    <link rel="icon" type="image/png" href="../../public/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap"
+        rel="stylesheet">
+    <title>Sustentec | Cadastro de Residuos - Escolher método</title>
 </head>
 
 <body>
-    <header class="cabecalho">
-        <nav class="cabecalho__nav">
-            <img class="cabecalho__nav__icon" src="img/icon-user.svg" alt="icon user">
-            <h1 class="cabecalho__nav__nome">John Doe</h1>
-        </nav>
-    </header>
-    <main class="conteudo">
-        <section>
-            <h1 class="conteudo__titulo">Cadastro de resíduos</h1>
-            <div class="conteudo__cadastro-entrega">
-                <img class="conteudo__img" src="img/caminhao.svg" alt="icon-caminhao">
-                <p class="conteudo__cadastro-entrega__texto">ENTREGAR</p>
+    <header class="nav-box-background">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="../userArea/index.html">
+                <div class="username-container">
+                    <img src="../../img/perfil.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                    <span>John Doe</span>
+                </div>
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Nova coleta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Historico de coletas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Meus Projetos</a>
+                    </li>
+
+                </ul>
             </div>
-            <div class="conteudo__cadastro-busca">
-                <img class="conteudo__img" src="img/busca.svg" alt="icon-busca">
-                <p class="conteudo__cadastro-busca__texto">BUSCAR</p>
+    </header>
+    <main class="content">
+        <span class="content-title">Cadastro de resíduos</span>
+        <section class="content-area">
+            <div class="content-register-delivery">
+                <div class="content-choice-container">
+                    <div class="content-choice-container-border">
+                        <img class="content-icon" src="img/caminhao.svg" alt="icon-busca">
+                        <p class="content-text">ENTREGAR</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-register-pickup">
+                <div class="content-choice-container">
+                    <div class="content-choice-container-border">
+                        <img class="content-icon" src="img/busca.svg" alt="icon-busca">
+                        <p class="content-text">BUSCAR</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <footer class="rodape">
+    <footer class="footer-container">
         <img src="../../img/Vector.svg" alt="">
         <img src="../../img/notification-bell.svg" alt="">
     </footer>

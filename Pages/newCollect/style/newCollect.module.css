@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-:root {
-    --fonte-primaria: 'Roboto', sans-serif;
-}
+@import '../../../style/global.css';
 
 * {
     margin: 0;
@@ -10,95 +6,117 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
 body {
-    background-image: linear-gradient(rgb(255, 255, 255, 0.75), rgb(255, 255, 255, 0.75)), url("img/reciclagem-de-residuos.webp");
+    background-image: linear-gradient(rgb(255, 255, 255, 0.75), rgb(255, 255, 255, 0.75)), url("../../../img/reciclagem-de-residuos.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-.cabecalho {
-    width: 10%px;
-    height: 61px;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.233), rgba(132, 248, 77, 1));
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-}
 
-.cabecalho__nav {
+.username-container {
+    font-size: var(--primary-font-size);
     display: flex;
-    gap: 16px;
     align-items: center;
-    padding: 11px 0 0 21px;
+    margin: 0 20px
 }
 
-.cabecalho__nav__nome {
-    font-size: 12px;
-    font-family: var(--fonte-primaria);
+.username-container span {
+    margin: 0 10px
 }
 
-.conteudo {
+.navbar-toggler {
+    margin: 0 20px 0 0;
+}
+
+.nav-box-background {
+    background: white;
+}
+
+.navbar {
+    background: var(--gradient-linear-bottom);
+}
+
+.content {
     display: flex;
     flex-direction: column;
-    background-color: #f6f6f6;
-    align-items: center;    
-    margin: 15vh 3vh 10vh 3vh;
+    background-color: var(--light-gray);
+    box-shadow: var(--container-box-shadow);
+    border-radius: var(--container-border-radius);
+    margin: 100px 15px;
 }
 
-.conteudo__titulo {
-    font-family: var(--fonte-primaria);
-    font-size: 20px;
-    padding-top: 10%;
+.content-area {
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--container-border-radius);
+    margin: 0 auto 10px;
+    width: 330px;
+    height: 420px;
+    align-items: center;
 }
 
-.conteudo__cadastro-entrega {
-    margin: 10%;
-    border-radius: 4px;
-    border: 15px solid rgba(234, 98, 0, 0.5);
-    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.2);
-    padding: 10%;
-    background-color: #f6f6f6;
+.content-title {
+    font-size: var(--smaller-font-size);
+    color: var(--medium-gray);
+    text-align: left;
+    margin-left: 5px;
 }
 
-.conteudo__cadastro-entrega__texto {
-    font-family: var(--fonte-primaria);
+.content-choice-container {
+    box-shadow: var(--container-box-shadow);
+    border-radius: var(--container-border-radius);
+    background: var(--light-gray);
+    width: 225px;
+    height: 155px;
+    margin: 0 auto;
+}
+
+.content-choice-container-border {
+    position: absolute;
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--container-border-radius);
+    width: 215px;
+    height: 145px;
+    margin: 5px;
+
+
+
+}
+
+.content-register-delivery {
+    box-shadow: var(--container-box-shadow);
+    border-radius: var(--container-border-radius);
+    background-color: rgba(234, 98, 0, 0.5);
+    padding: 4%;
+    margin: 20px 35px 15px
+}
+
+.content-text {
     font-size: 100%;
+    font-weight: bold;
     text-align: center;
+    color: var(--dark-gray);
 }
 
-.conteudo__cadastro-entrega:hover {
-    background-color: rgba(141, 140, 140, 0.5);
-    cursor: pointer;
+.content-register-pickup {
+    border-radius: var(--container-border-radius);
+    box-shadow: var(--container-box-shadow);
+    background-color: rgba(28, 205, 246, 0.5);
+    padding: 4%;
+    margin: 5px 35px 7px
 }
 
-.conteudo__cadastro-busca {
-    margin: 10%;
-    border-radius: 4px;
-    border: 15px solid rgba(28, 205, 246, 0.5);
-    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.2);
-    padding: 10%;
-}
-
-.conteudo__cadastro-busca:hover {
-    background-color: rgba(141, 140, 140, 0.5);
-    cursor: pointer;
-}
-
-.conteudo__cadastro-busca__texto {
-    font-family: var(--fonte-primaria);
-    font-size: 100%;
-    text-align: center;
-}
-
-.conteudo__img {
+.content-icon {
     width: 100%;
     height: 61.21px;
     padding-bottom: 10%;
 }
 
-.rodape {
+.footer-container {
     background-color: #5c5c5c;
     padding: 16px 0 16px 0;
     position: fixed;
