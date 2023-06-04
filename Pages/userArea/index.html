@@ -10,104 +10,122 @@
   <link rel="stylesheet" href="style/userArea.module.css">
   <link rel="stylesheet" href="../../style/global.css">
   <link rel="icon" type="image/png" href="../../public/favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet">
   <title> ReColeta | Area do usuário </title>
 </head>
 
 
 <body>
 
-  <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="#">
-      <img src="../../img/perfil.png" width="30" height="30" class="d-inline-block align-top" alt="">
-      John Doe
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../../Pages/newCollect/index.html">Nova coleta</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Historico de coletas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Meus Projetos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../../index.html">sair</a>
-        </li>
+  <header class="nav-box-background">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="../userArea/index.html">
+        <div class="username-container">
+          <img src="../../img/perfil.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          <span>John Doe</span>
+        </div>
 
-      </ul>
-    </div>
-  </nav>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Nova coleta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Historico de coletas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Meus Projetos</a>
+          </li>
+
+        </ul>
+      </div>
+  </header>
   <div class="container">
-    <div class=" perfil">
+    <div class="profile-header">
       <p>Area do Usuario</p>
-      <img src="../../img/perfil.png" alt="perfil">
-    </div>
-    PERFIL
-    <div class="dados">
-      <p>
-        <strong>NOME</strong><br>
-        John Doe<br>
-        <strong>E-MAIL</strong><br>
-        teste@teste.com.br<br>
-        <strong>TELEFONE</strong><br>
-        (11)99999-0000
-      </p>
-      <div class="botoes">
-        <button type="submit">Alterar senha</button>
-        <button type="submit">Editar perfil</button>
+      <div class="profile-header-photo">
+        <img src="../../img/perfil.png" alt="perfil">
       </div>
     </div>
-    ESTATISTICAS
-    <div class=carrosel>
-      <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/recic_material.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="img/reciclagem2.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="img/volume_residuos.png" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+    <section class="profile-section">
+      <div class="profile-section-title">
+        <span>
+          Perfil
+        </span>
       </div>
+      <div class="profile-section-border">
+        <div class="profile-user-information">
+          <span>Nome</span>
+          <p>
+            John Doe
+          </p>
+          <span>E-mail</span>
+          <p>
+            teste@teste.com.br
+          </p>
+          <span>Telefone</span>
+          <p>
+            (11)99999-0000
+          </p>
+        </div>
+        <div class="profile-buttons">
+          <button type="submit">Alterar senha</button>
+          <button type="submit">Editar perfil</button>
+        </div>
+      </div>
+    </section>
+    <section class="profile-section">
+      <div class="profile-section-title">
+        <span>
+          Estatisticas
+        </span>
+      </div>
+      <div class="profile-section-border">
+        <div class=carrosel>
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/recic_material.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/reciclagem2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/volume_residuos.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
 
-    </div>
-
-
-
-
-
-
+        </div>
+      </div>
+    </section>
   </div>
+  <footer class="footer-container">
+    <img src="../../img/Vector.svg" alt="">
+    <img src="../../img/notification-bell.svg" alt="">
+  </footer>
 </body>
 
 </html>
