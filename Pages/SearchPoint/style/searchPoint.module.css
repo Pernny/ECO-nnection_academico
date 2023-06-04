@@ -1,6 +1,7 @@
 @import '../../../style/global.css';
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -13,33 +14,54 @@ html, body {
     background: linear-gradient(to bottom, white, #7ee3fa);
 }
 
+.username-container {
+    font-size: var(--primary-font-size);
+    display: flex;
+    align-items: center;
+    margin: 0 20px
+}
+
+.username-container span {
+    margin: 0 10px
+}
+
+.navbar-toggler {
+    margin: 0 20px 0 0;
+}
+
+.nav-box-background {
+    background: white;
+}
+
 .navbar {
-    background: linear-gradient(to bottom, #A6FA7E, #FF9A51);
+    background: var(--gradient-linear-bottom);
 }
 
 
 .filter-container {
     flex-shrink: 0;
-    background: linear-gradient(to bottom, #A6FA7E, #FF9A51);
+    background: var(--gradient-linear-bottom);
     padding: 10px;
     margin-bottom: 10px;
-    margin-top:10px;
-    border: 2px solid #000;
-    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: var(--container-box-shadow);
+    border-radius: var(--container-border-radius);
 }
 
 .filter-wrapper {
-    background-color: #fff;
+    background-color: var(--light-gray);
     padding: 10px;
-    border-radius: 10px;
+    box-shadow: var(--container-box-shadow);
+    border-radius: var(--container-border-radius);
 }
+
 #mapa-container {
     flex-grow: 1;
     background-color: #fff;
-    border: 2px solid #000;
     overflow: hidden;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: var(--container-border-radius);
+    box-shadow: var(--container-box-shadow);
+    margin-bottom: 40px;
 }
 
 #mapa-container iframe {
@@ -48,3 +70,12 @@ html, body {
     border: 0;
 }
 
+.footer-container {
+    background-color: #5c5c5c;
+    padding: 16px 0 16px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}

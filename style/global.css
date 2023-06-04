@@ -1,36 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
   font-family: 'Poppins', sans-serif;
 
+
+  /*Default Body Styles*/
+
+
+  /*Default Container Styles*/
+  --container-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --container-border-radius: 3px;
+
   /*Default Container Gradient*/
   --gradient-linear-bottom: linear-gradient(to bottom, #A6FA7E, rgba(240, 144, 0, 0.15));
-  --gradient-linear-top: linear-gradient(to top, #4BD609, #F09000); 
+  --gradient-linear-top: linear-gradient(to top, #4BD609, #F09000);
 
   /*Background Gradient*/
-  --gradient-circle: radial-gradient(circle, #0000ff, #ffffff); 
+  --gradient-circle: radial-gradient(circle, #0000ff, #ffffff);
 
 
-  --analog-green: #A6FA7E; 
-  --primary-green: #84F84D; 
-  --secondary-green: #62F61C; 
+  --analog-green: #A6FA7E;
+  --primary-green: #84F84D;
+  --secondary-green: #62F61C;
   --tertiary-green: #4BD609;
 
-  --analog-blue: #7EE3FA; 
-  --primary-green: #4DD8F8; 
-  --secondary-green: #1CCDF6; 
+  --analog-blue: #7EE3FA;
+  --primary-green: #4DD8F8;
+  --secondary-green: #1CCDF6;
   --tertiary-green: #09B0D6;
-  
-  --analog-orange: #FF9A51; 
-  --primary-orange: #FF7C1E; 
-  --secondary-orange: #EA6200; 
+
+  --analog-orange: #FF9A51;
+  --primary-orange: #FF7C1E;
+  --secondary-orange: #EA6200;
   --tertiary-orange: #DB5C00;
 
 
   --light-gray: #F6F6F6;
   --light-medium-gray: #C2C2C2;
-  --medium-gray: #B7B7B7 ;
+  --medium-gray: #B7B7B7;
   --dark-gray: #5C5C5C;
-  
-  --primary-font-size: 12px; 
-  --small-font-size: 10px; 
-  --smaller-font-size: 8px; 
+
+  --primary-font-size: 14px;
+  --small-font-size: 12px;
+  --smaller-font-size: 10px;
 }
