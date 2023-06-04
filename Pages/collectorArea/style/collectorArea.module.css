@@ -100,7 +100,7 @@ body {
   padding-bottom: 10%;
 }
 
-.rodape {
+.footer-container {
   background-color: #5c5c5c;
   padding: 16px 0 16px 0;
   position: fixed;
@@ -108,4 +108,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
+
+.footer-container img {
+  width: 16px;
 }
