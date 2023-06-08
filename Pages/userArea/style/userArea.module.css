@@ -9,6 +9,14 @@ body {
   background: linear-gradient(radial, white, #7ee3fa);
 }
 
+.profile-section {
+  display: block;
+}
+
+.active-section {
+  display: block;
+}
+
 .username-container {
   font-size: var(--primary-font-size);
   display: flex;
@@ -50,7 +58,7 @@ body {
 
 .profile-header-photo img {
   width: 110px;
-  margin-left: 110px;
+  margin-left: 115px;
 }
 
 .profile-section-title {
@@ -106,6 +114,24 @@ body {
   background-color: var(--dark-gray);
   border: none;
   padding: 0 13px
+}
+
+.dot-menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.dot.active {
+  background-color: #555;
 }
 
 .footer-container {
