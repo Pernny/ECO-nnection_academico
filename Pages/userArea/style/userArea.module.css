@@ -9,48 +9,7 @@ body {
   background: linear-gradient(radial, white, #7ee3fa);
 }
 
-.profile-section {
-  display: block;
-}
-
-.active-section {
-  display: block;
-}
-
-.username-container {
-  font-size: var(--primary-font-size);
-  display: flex;
-  align-items: center;
-  margin: 0 20px
-}
-
-.username-container span {
-  margin: 0 10px
-}
-
-.navbar-toggler {
-  margin: 0 20px 0 0;
-}
-
-.nav-box-background {
-  background: white;
-  box-shadow: var(--container-box-shadow);
-}
-
-.navbar {
-  background: var(--gradient-linear-bottom);
-}
-
-.container {
-  height: 85%;
-  width: 95%;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--light-gray);
-  box-shadow: var(--container-box-shadow);
-  margin: 10px 9px 60px;
-}
-
+/* First Content */
 .profile-header p {
   color: var(--medium-gray);
   font-size: var(--small-font-size)
@@ -116,34 +75,4 @@ body {
   padding: 0 13px
 }
 
-.dot-menu {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.dot {
-  width: 7px;
-  height: 7px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: 0 5px;
-}
-
-.dot.active {
-  background-color: #555;
-}
-
-.footer-container {
-  background-color: #5c5c5c;
-  padding: 16px 0 16px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.footer-container img {
-  width: 16px;
-}
+/* End of Frist Content Styles */

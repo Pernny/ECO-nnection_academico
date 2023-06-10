@@ -1,115 +1,107 @@
 @import '../../../style/global.css';
 
-:root {
-  --fonte-primaria: 'Roboto', sans-serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 html,
 body {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(radial, white, #7ee3fa);
 }
 
-body {
-  background-image: linear-gradient(rgb(255, 255, 255, 0.75), rgb(255, 255, 255, 0.75)), url("img/reciclagem-de-residuos.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.collector-container-bg {
+  border-radius: var(--container-border-radius);
+  box-shadow: var(--container-box-shadow);
+  background-color: #fff;
+  margin: 8px 8px;
+  width: 95%;
+
 }
 
-.cabecalho {
-  width: 10%px;
-  height: 61px;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.233), rgba(132, 248, 77, 1));
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+.collector-container {
+  background: var(--gradient-linear-bottom);
+  padding: 1px 1px;
+
 }
 
-.cabecalho__nav {
+.container-collector-dot-menu {
+  margin-bottom: 20px;
+}
+
+
+/* First Content */
+.collector-profile-inroduction {
+  margin-bottom: 10px
+}
+
+.collector-profile-inroduction span {
+  font-size: var(--primary-font-size);
+  color: var(--dark-gray);
+}
+
+.collector-profile-header {
   display: flex;
-  gap: 16px;
-  align-items: center;
-  padding: 11px 0 0 21px;
+  margin-top: 20px;
 }
 
-.cabecalho__nav__nome {
-  font-size: 12px;
-  font-family: var(--fonte-primaria);
+.collector-profile-header-name-ratings h5 {
+  color: var(--dark-gray);
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-top: 5px;
 }
 
-.conteudo {
-  display: flex;
-  flex-direction: column;
-  background-color: #f6f6f6;
-  align-items: center;
-  margin: 15vh 3vh 10vh 3vh;
+.collector-profile-header-photo img {
+  width: 75px;
+  margin-left: 60px;
+  margin-right: 30px;
+  margin-bottom: 10px;
 }
 
-.conteudo__titulo {
-  font-family: var(--fonte-primaria);
-  font-size: 20px;
-  padding-top: 10%;
+.collector-profile-section-title {
+  font-size: var(--small-font-size);
+  color: var(--medium-gray);
 }
 
-.conteudo__cadastro-entrega {
-  margin: 10%;
-  border-radius: 4px;
-  border: 15px solid rgba(234, 98, 0, 0.5);
-  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.2);
-  padding: 10%;
-  background-color: #f6f6f6;
+.collector-profile-section-border {
+  border-radius: var(--container-border-radius);
+  border: 1px solid var(--medium-gray);
 }
 
-.conteudo__cadastro-entrega__texto {
-  font-family: var(--fonte-primaria);
-  font-size: 100%;
-  text-align: center;
+.collector-profile-user-information {
+  padding: 0 0 2px 15px;
+  margin-bottom: 20px;
 }
 
-.conteudo__cadastro-entrega:hover {
-  background-color: rgba(141, 140, 140, 0.5);
-  cursor: pointer;
+.collector-profile-user-information span {
+  color: var(--medium-gray);
+  font-size: var(--smaller-font-size);
 }
 
-.conteudo__cadastro-busca {
-  margin: 10%;
-  border-radius: 4px;
-  border: 15px solid rgba(28, 205, 246, 0.5);
-  box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.2);
-  padding: 10%;
+.collector-profile-user-information p {
+  color: var(--dark-gray);
+  font-size: var(--small-font-size);
+  margin-bottom: 0;
 }
 
-.conteudo__cadastro-busca:hover {
-  background-color: rgba(141, 140, 140, 0.5);
-  cursor: pointer;
+.collector-profile-stats-information {
+  padding: 0 0 2px 15px;
+  height: 240px;
 }
 
-.conteudo__cadastro-busca__texto {
-  font-family: var(--fonte-primaria);
-  font-size: 100%;
-  text-align: center;
+.collector-profile-stats-information span {
+  color: var(--medium-gray);
+  font-size: var(--smaller-font-size);
 }
 
-.conteudo__img {
-  width: 100%;
-  height: 61.21px;
-  padding-bottom: 10%;
+.collector-profile-stats-information p {
+  color: var(--dark-gray);
+  font-size: var(--small-font-size);
+  margin-bottom: 0;
 }
 
-.footer-container {
-  background-color: #5c5c5c;
-  padding: 16px 0 16px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+.collector-profile-collectables-information {
+  height: 65px;
 }
 
-.footer-container img {
-  width: 16px;
-}
+/* End of Frist Content Styles */
