@@ -29,7 +29,7 @@ body::before {
     }
 }
 
-.container {
+.login-container {
     display: flex;
     align-items: center;
     justify-content: center;
