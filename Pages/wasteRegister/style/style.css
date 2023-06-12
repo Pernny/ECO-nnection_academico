@@ -1,0 +1,99 @@
+@import '../../../style/global.css';
+
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(radial, white, #7ee3fa);
+}
+
+/* First Content */
+.type-header p {
+  color: var(--medium-gray);
+  font-size: var(--small-font-size)
+}
+
+.title {
+  font-size: var(--small-font-size);
+  color: var(--medium-gray);
+}
+
+.type-section-border {
+  border-radius: var(--container-border-radius);
+  border: 1px solid var(--medium-gray);
+}
+
+
+.type-information {
+  padding: 0 0 2px 15px;
+  height: 220px;
+}
+.type-information2 {
+    padding: 0 0 2px 15px;
+    height: 60px;
+  }
+
+/* End of Frist Content Styles */
+
+
+  
+
+  .distance-selector {
+    position: relative;
+    width: 90%; /* Alterado para 90% */
+    height: 20px;
+    margin: 20px auto; /* Centralizado horizontalmente */
+  }
+  
+  .line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #000;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    transform: translate(-50%, -50%);
+    background-color: #7ee3fa;
+    border-radius: 50%;
+    cursor: grab;
+    user-select: none;
+  }
+  
+  .start-label {
+    position: absolute;
+    top: 120%; /* Ajustado para 120% */
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .middle-label {
+    position: absolute;
+    top: 120%; /* Ajustado para 120% */
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .end-label {
+    position: absolute;
+    top: 120%; /* Ajustado para 120% */
+    right: 0;
+    transform: translateY(-50%);
+  }
+  .btn-busca {
+    background-color: #ff9a51;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
