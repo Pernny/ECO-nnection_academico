@@ -1,14 +1,70 @@
-.bloco__informacao {
-    width: 21.6rem;
+@import '../../../style/global.css';
+
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../img/reciclagem-de-residuos.webp');
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: -1;
+    background-size: contain;
+    background-position: center;
+}
+
+.container-gradient {
+    background: var(--gradient-linear-bottom);
+    padding: 5px;
+    border-radius: var(--container-border-radius);
+    font-weight: 300;
+    font-size: var(--small-font-size);
+}
+
+.container-my-address {
+    box-shadow: var(--container-box-shadow);
+    border-radius: var(--container-border-radius);
+    background-color: white;
+    margin: 10px;
+}
+
+.container-white {
+    box-shadow: var(--container-box-shadow);
+    border-radius: var(--container-border-radius);
+    background-color: white;
+    padding: 1px;
+    margin: 10px;
+}
+
+.container-my-address-title {
+    font-size: var(--small-font-size);
+    margin-left: 8px;
+}
+
+.information-block  {
+    width: 20.25rem;
     height: 5.9rem;
     border: 2px solid #4BD609;
     margin: 10px 11px 0 7px;
 }
 
-.novo__endereco {
+.new-address {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 2.25rem 0 1.7rem;
+    font-size: var(--primary-font-size);
 }
+
+.new-address span {
+    margin-bottom: 5px;
+}
+

@@ -13,7 +13,6 @@
 
   /*Default Container Gradient*/
   --gradient-linear-bottom: linear-gradient(to bottom, #A6FA7E, rgba(240, 144, 0, 0.15));
-  --gradient-linear-top: linear-gradient(to top, #4BD609, #F09000);
 
   /*Background Gradient*/
   --gradient-circle: radial-gradient(circle, #0000ff, #ffffff);
