@@ -76,3 +76,36 @@ body {
 }
 
 /* End of Frist Content Styles */
+
+/* Start of Second Content Styles */
+.container-user-actions-background {
+  background: var(--gradient-linear-bottom);
+  border-radius: var(--container-border-radius);
+  box-shadow: var(--container-box-shadow);
+  padding: 6px;
+  margin: 10px 0px 0px
+}
+
+.container-user-actions {
+  box-shadow: var(--container-box-shadow);
+  background: white;
+  padding: 1px 5px 5px;
+}
+
+.user-actions-icons {
+  height: 300px;
+
+}
+
+.container-user-demands {
+  box-shadow: var(--container-box-shadow);
+  background: white;
+  padding: 1px 5px 5px;
+  margin-top: 5px;
+}
+
+.profile-active-demands {
+  height: 291.5px;
+}
+
+/* End of Second Content Styles */
