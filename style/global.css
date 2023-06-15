@@ -164,11 +164,24 @@
 /* ------------------ DEFAULT CONTAINER (WHITE BG) CSS -------------------------------------------------- */
 
 .container-content {
+  top: 0;
+  left: 0;
+
   display: none;
+  transition: transform 0.3s ease-in-out;
 }
 
 .container-content.active-section {
   display: block;
+  transform: translateX(0);
+}
+
+.container-content.next-section {
+  transform: translateX(100%);
+}
+
+.container-content.prev-section {
+  transform: translateX(-100%);
 }
 
 .container {
