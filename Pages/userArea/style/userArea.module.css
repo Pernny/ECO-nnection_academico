@@ -9,7 +9,7 @@ body {
   background: linear-gradient(radial, white, #7ee3fa);
 }
 
-/* First Content */
+/* Start of First Content Styles */
 .profile-header p {
   color: var(--medium-gray);
   font-size: var(--small-font-size)
@@ -125,6 +125,9 @@ body {
 }
 
 /* End of Second Content Styles */
+
+/* Start of Third Content Styles */
+/* End of Third Content Styles */
 
 /* Start of Forth Content Styles*/
 .container-gradient {
