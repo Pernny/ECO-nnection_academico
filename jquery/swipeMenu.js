@@ -18,12 +18,32 @@ $(document).ready(function () {
   });
 
   function changeSection(index) {
-    $('.container-content').removeClass('active-section');
-    $('.dot').removeClass('active');
+    if (index === currentSectionIndex) {
+      return; // Do nothing if the same dot is clicked
+    }
+
+    var currentSection = $('.container-content').eq(currentSectionIndex);
+    var nextSection = $('.container-content').eq(index);
+
+    currentSection.removeClass('active-section');
+    nextSection.addClass('next-section');
+
+    // Trigger reflow to ensure transition starts
+    void nextSection.get(0).offsetWidth;
+
+    currentSection.addClass('prev-section');
+    nextSection.removeClass('next-section').addClass('active-section');
+
+    // Remove classes after transition ends
+    setTimeout(function () {
+      currentSection.removeClass('prev-section');
+    }, 300);
+
+    // Update dot classes
+    $('.dot').eq(currentSectionIndex).removeClass('active');
+    $('.dot').eq(index).addClass('active');
 
     currentSectionIndex = index;
-
-    $('.container-content').eq(currentSectionIndex).addClass('active-section');
-    $('.dot').eq(currentSectionIndex).addClass('active');
   }
 });
+

@@ -16,7 +16,7 @@ body::before {
     opacity: 0.3;
     pointer-events: none;
     z-index: -1;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
 }
 
