@@ -1,1 +1,0 @@
-# ECO-nnection_academico
