@@ -1,12 +1,14 @@
+import styles from '../../../../style/userArea.module.css'
+
 export const UserAreaDemands = () => {
   return (
-    <div className="container-user-demands">
-      <div className="profile-section-title">
+    <div className={styles["container-user-demands"]}>
+      <div className={styles["profile-section-title"]}>
         <span>
           Demandas ativas
         </span>
-        <div className="profile-section-border">
-          <div className="profile-active-demands">
+        <div className={styles["profile-section-border"]}>
+          <div className={styles["profile-active-demands"]}>
 
           </div>
         </div>

@@ -1,30 +1,24 @@
+import styles from '../../../../style/userArea.module.css'
+
+import { UserActionsButtonsData } from './data'
+
+
 export const UserAreaActions = () => {
   return (
-    <div className="container-user-actions">
-      <div className="profile-section-title">
+    <div className={styles["container-user-actions"]}>
+      <div className={styles["profile-section-title"]}>
         <span>
           Ações do usuário
         </span>
-        <div className="profile-section-border">
-          <div className="user-actions-icons">
-            <a href="/">
-              <img className="pressable-icons" src="../../img/userArea/CadastrarPontoColeta.png" alt="" />
-            </a>
-            <a href="">
-              <img className="pressable-icons" src="../../img/userArea/CadastrarNovoProjeto.png" alt="" />
-            </a>
-            <a href="../newCollect/index.html">
-              <img className="pressable-icons" src="../../img/userArea/CadastrarResidos.png" alt="" />
-            </a>
-            <a href="../SearchPoint/index.html">
-              <img className="pressable-icons" src="../../img/userArea/BuscarPontoColeta.png" alt="" />
-            </a>
-            <a href="">
-              <img className="pressable-icons" src="../../img/userArea/BuscarProjetos.png" alt="" />
-            </a>
-            <a href="">
-              <img className="pressable-icons" src="../../img/userArea/BuscarResidos.png" alt="" />
-            </a>
+        <div className={styles["profile-section-border"]}>
+          <div className={styles["user-actions-icons"]}>
+            {UserActionsButtonsData.map((item) => {
+              return (
+                <a key={item.id} href={item.href}>
+                  <img className={styles["pressable-icons"]} src={item.image} />
+                </a>
+              )
+            })}
           </div>
         </div>
       </div>
