@@ -12,7 +12,7 @@ export const UserSwipeableInterface = () => {
 
   const handlers = useSwipeable({
     onSwipedLeft: () => {
-      if (activeIndex < 3) {
+      if (activeIndex < 4) {
         setActiveIndex(activeIndex + 1);
       }
     },
@@ -30,7 +30,7 @@ export const UserSwipeableInterface = () => {
         {activeIndex === 1 && <UserActionsAndDemands />}
         {activeIndex === 2 && <UserAddress />}
         {activeIndex === 3 && <UserAreaNews />}
-        {activeIndex === 5 && <UserResidues />}
+        {activeIndex === 4 && <UserResidues />}
       </div>
       <UserAreaDotMenu activeIndex={activeIndex} handleDotClick={setActiveIndex} />
     </div>

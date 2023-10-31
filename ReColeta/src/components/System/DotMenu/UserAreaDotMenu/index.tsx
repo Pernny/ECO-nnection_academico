@@ -2,7 +2,7 @@ import { UserAreaDotMenuProps } from "../../../../Types/SystemComponentsTypes/Us
 
 
 export const UserAreaDotMenu: React.FC<UserAreaDotMenuProps> = ({ activeIndex, handleDotClick }) => {
-  const dotCount = 4; // Assuming you have 4 sections, you can adjust this based on your actual sections
+  const dotCount = 5; // Assuming you have 4 sections, you can adjust this based on your actual sections
 
   const renderDots = () => {
     const dots = [];
@@ -21,3 +21,7 @@ export const UserAreaDotMenu: React.FC<UserAreaDotMenuProps> = ({ activeIndex, h
 
   return <div className="dot-menu">{renderDots()}</div>;
 };
+
+
+
+
