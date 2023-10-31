@@ -115,6 +115,12 @@
   background: var(--gradient-linear-bottom);
 }
 
+.nav-item-text {
+  font-size: var(--primary-font-size);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /* ------------------------------------------------------------------------ */
 
 /*--------------------------------------------------- FOOTER CODIGO -----------------------------------------------------------
@@ -212,6 +218,7 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 
 }
 

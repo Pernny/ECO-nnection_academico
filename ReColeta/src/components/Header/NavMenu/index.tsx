@@ -7,7 +7,9 @@ export const NavMenu = () => {
         {NavMenuData.map((item) => (
           <li className="nav-item" key={item.id}>
             <a className="nav-link active" aria-current="page" href={item.MenuItemLink}>
-              {item.MenuitemName}
+              <p className="nav-item-text">
+                {item.MenuItemName}
+              </p>
             </a>
           </li>
         ))}
