@@ -24,7 +24,7 @@ export const UserSwipeableInterface = () => {
   });
 
   return (
-    <div>
+    <>
       <div {...handlers}>
         {activeIndex === 0 && <UserProfile />}
         {activeIndex === 1 && <UserActionsAndDemands />}
@@ -33,6 +33,6 @@ export const UserSwipeableInterface = () => {
         {activeIndex === 4 && <UserResidues />}
       </div>
       <UserAreaDotMenu activeIndex={activeIndex} handleDotClick={setActiveIndex} />
-    </div>
+    </>
   );
 };

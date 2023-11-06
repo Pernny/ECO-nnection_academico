@@ -3,7 +3,6 @@
 
 html,
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
   background: linear-gradient(radial, white, #7ee3fa);
@@ -16,8 +15,17 @@ body {
 }
 
 .profile-header-photo img {
-  width: 110px;
+  width: 120px;
   margin-left: 115px;
+}
+
+@media screen and (max-width: 600px) {
+  .profile-header-photo img {
+    width: 90px;
+    height: 90px;
+    margin-left: 120px;
+  }
+
 }
 
 .profile-section-title {
@@ -63,7 +71,7 @@ body {
 }
 
 .profile-buttons {
-  margin: 0 60px 15px;
+  margin: 0 59px 15px;
 }
 
 .profile-buttons button {
@@ -72,7 +80,8 @@ body {
   color: var(--light-gray);
   background-color: var(--dark-gray);
   border: none;
-  padding: 0 13px
+  padding: 0 13px;
+  margin: 0 0 0 2px
 }
 
 /* End of Frist Content Styles */
@@ -87,9 +96,11 @@ body {
 }
 
 .container-user-actions {
+  border-radius: var(--container-border-radius);
   box-shadow: var(--container-box-shadow);
   background: white;
   padding: 1px 5px 5px;
+  margin-top: 8px;
 }
 
 .user-actions-icons {
@@ -114,6 +125,7 @@ body {
 }
 
 .container-user-demands {
+  border-radius: var(--container-border-radius);
   box-shadow: var(--container-box-shadow);
   background: white;
   padding: 1px 5px 5px;
@@ -150,11 +162,12 @@ body {
   border-radius: var(--container-border-radius);
   background-color: white;
   padding: 1px;
-  margin: 10px;
+  margin: 10px 3px;
 }
 
 .container-my-address-title {
   font-size: var(--small-font-size);
+  color: var(--medium-gray);
   margin-left: 8px;
 }
 

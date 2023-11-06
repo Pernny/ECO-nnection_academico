@@ -137,7 +137,7 @@
 .footer-container {
   background-color: #5c5c5c;
   padding: 16px 0 16px 0;
-  position: fixed;
+  position: bottom;
   bottom: 0;
   width: 100%;
   display: flex;
@@ -147,6 +147,13 @@
 .footer-container img {
   width: 16px;
 }
+
+@media screen and (min-width: 600px) {
+  .footer-container {
+    display: none;
+  }
+}
+
 
 /* ------------------------------------------------------------------------ */
 
@@ -169,25 +176,7 @@
 
 /* ------------------ DEFAULT CONTAINER (WHITE BG) CSS -------------------------------------------------- */
 
-.container-content {
-  top: 0;
-  left: 0;
 
-  transition: transform 0.3s ease-in-out;
-}
-
-.container-content.active-section {
-  display: block;
-  transform: translateX(0);
-}
-
-.container-content.next-section {
-  transform: translateX(100%);
-}
-
-.container-content.prev-section {
-  transform: translateX(-100%);
-}
 
 .container {
   height: 85%;
@@ -197,6 +186,7 @@
   background-color: var(--light-gray);
   box-shadow: var(--container-box-shadow);
   margin: 10px 9px;
+
 }
 
 /* ------------------------------------------------------------------------ */
@@ -217,8 +207,8 @@
 .dot-menu {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 14px;
+  margin-bottom: 12px;
 
 }
 

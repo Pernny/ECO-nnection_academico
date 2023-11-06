@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from '../../../../style/userArea.module.css'
 
 import { UserActionsButtonsData } from './data'
@@ -14,9 +15,9 @@ export const UserAreaActions = () => {
           <div className={styles["user-actions-icons"]}>
             {UserActionsButtonsData.map((item) => {
               return (
-                <a key={item.id} href={item.href}>
+                <Link key={item.id} to={item.path}>
                   <img className={styles["pressable-icons"]} src={item.image} />
-                </a>
+                </Link>
               )
             })}
           </div>

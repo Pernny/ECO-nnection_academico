@@ -5,7 +5,6 @@ import styles from '../../../style/userArea.module.css'
 
 export const UserAddress = () => {
   return (
-
     <ContainerContent>
       <div className={styles['container-my-address']}>
         <div className={styles['container-gradient']}>
