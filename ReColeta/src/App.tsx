@@ -1,7 +1,6 @@
 import './style/global.css'
 import './bootstrap-5.2.3-dist/css/bootstrap.min.css';
-
-import { UserAreaPage } from './pages/UserAreaPage';
+import Routes from './Routes';
 
 
 
@@ -9,7 +8,7 @@ function App() {
   return (
     <>
       <div>
-        <UserAreaPage />
+        <Routes />
       </div>
 
 

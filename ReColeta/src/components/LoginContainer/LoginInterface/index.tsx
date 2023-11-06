@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export const LoginInterface = () => {
   return (
     <div className="login-box">
@@ -19,15 +21,15 @@ export const LoginInterface = () => {
           <input type="password" placeholder="Senha" />
         </div>
         <div className="login-button">
-          <a href="../userArea/index.html" className="button">
+          <Link to="/dashboard" className="button">
             Entrar
-          </a>
+          </Link>
         </div>
         <div className="login-forgot-password">
-          <a href="">Esqueceu sua senha ?</a>
+          <Link to="/forgot-password">Esqueceu sua senha ?</Link>
         </div>
         <div className="login-new-user">
-          <a href="">Ainda não tem cadastro ?</a>
+          <Link to="/signup">Ainda não tem cadastro ?</Link>
         </div>
       </form>
     </div>
