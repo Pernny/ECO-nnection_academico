@@ -4,6 +4,8 @@ import { LoginPage } from './pages/LoginPage';
 import { UserAreaPage } from './pages/UserAreaPage';
 import { NewCollectPage } from './pages/NewCollectPage';
 import { WastePage } from './pages/WastePage';
+import { WasteRegisterPage } from './pages/WasteRegisterPage';
+import { SearchPointPage } from './pages/SearchPointPage';
 
 function Routes() {
   return (
@@ -13,7 +15,8 @@ function Routes() {
         <Route path="/dashboard" element={<UserAreaPage />} />
         <Route path="/newCollect" element={<NewCollectPage />} />
         <Route path="/waste" element={<WastePage />} />
-        <Route path="/wasteRegister" element={<NewCollectPage />} />
+        <Route path="/wasteRegister" element={<WasteRegisterPage />} />
+        <Route path="/searchPoint" element={<SearchPointPage />} />
         {/* Define other routes as needed */}
       </ReactRoutes>
     </Router>

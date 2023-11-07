@@ -29,7 +29,7 @@ export const UserActionsButtonsData = [
     "id": 4,
     "image": BuscarPontoColetaButton,
     "name": "BuscarPontoColetaButton",
-    "path": "/"
+    "path": "/searchPoint"
   },
   {
     "id": 5,

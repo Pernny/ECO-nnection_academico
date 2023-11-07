@@ -5,7 +5,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(radial, white, #7ee3fa);
+  background: linear-gradient(circle, white, #7ee3fa);
 }
 
 /* Start of First Content Styles */
@@ -114,9 +114,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 33.33%;
-  padding: 2px;
+  width: 100px;
+  padding: 1px;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+  .user-actions-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    box-sizing: border-box;
+  }
+
+  .user-actions-icons a img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .user-actions-icons img {

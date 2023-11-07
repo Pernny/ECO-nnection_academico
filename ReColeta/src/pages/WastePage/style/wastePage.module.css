@@ -1,14 +1,6 @@
 @import '../../../style/global.css';
 
 
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(radial, white, #7ee3fa);
-}
-
 /* First Content */
 .type-header p {
     color: var(--medium-gray);

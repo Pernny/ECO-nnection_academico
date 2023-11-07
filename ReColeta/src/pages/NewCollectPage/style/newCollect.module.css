@@ -6,11 +6,6 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    height: 100%;
-}
-
 body {
     background-image: linear-gradient(rgb(255, 255, 255, 0.75), rgb(255, 255, 255, 0.75)), url("../../../img/reciclagem-de-residuos.webp");
     background-size: cover;

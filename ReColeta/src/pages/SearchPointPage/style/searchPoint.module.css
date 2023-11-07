@@ -1,13 +1,5 @@
 @import '../../../style/global.css';
 
-html,
-body {
-    height: 91.5%;
-    margin: 0;
-    padding: 0;
-
-}
-
 
 
 .search-box-container {
