@@ -5,7 +5,7 @@ export const UserAreaNews = () => {
   return (
     <ContainerContent>
       <div className={styles["container-user-actions-background"]}>
-        <div className={styles["container-user-actions"]}>
+        <div className={styles["container-user-news"]}>
           <div className={styles["profile-section-title"]}>
             <span>
               Noticias

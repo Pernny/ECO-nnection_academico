@@ -154,6 +154,15 @@ body {
 /* End of Second Content Styles */
 
 /* Start of Third Content Styles */
+
+.container-user-news {
+  border-radius: var(--container-border-radius);
+  box-shadow: var(--container-box-shadow);
+  background: white;
+  padding: 1px 5px 5px;
+  margin-top: 1px;
+}
+
 /* End of Third Content Styles */
 
 /* Start of Forth Content Styles*/

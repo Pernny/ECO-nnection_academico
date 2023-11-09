@@ -6,7 +6,7 @@ import '../../style/userArea.module.css'
 
 export const UserAreaPage = () => {
   return (
-    <body>
+    <>
       <Header />
       <>
         <UserAreaContainer>
@@ -14,6 +14,6 @@ export const UserAreaPage = () => {
         </UserAreaContainer>
 
       </>
-    </body>
+    </>
   );
 };
