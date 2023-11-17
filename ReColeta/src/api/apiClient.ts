@@ -10,4 +10,10 @@ export const updateUserProfile = (userData: UserData) => {
   return axios.put('/user', userData); // Example endpoint for updating user profile
 };
 
-// Add more API functions as needed for different endpoints
+export const loginUser = (credentials: any) => {
+  return axios.post('/login', credentials);
+};
+
+export const registerUser = (userData: UserData) => {
+  return axios.post('user/registration', userData);
+};

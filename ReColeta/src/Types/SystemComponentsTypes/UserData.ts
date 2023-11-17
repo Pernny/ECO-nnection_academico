@@ -1,5 +1,6 @@
 export interface UserData {
-  name: string;
+  firstName?: string;
+  lastName?: string;
   email: string;
-  // Add other properties as needed
+  password: string;
 }

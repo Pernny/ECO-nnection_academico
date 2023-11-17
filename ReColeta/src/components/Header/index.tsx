@@ -12,6 +12,7 @@ export const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <NavMenu />
+
       </nav>
     </header>
   )

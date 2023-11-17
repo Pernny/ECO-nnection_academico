@@ -6,12 +6,14 @@ import { NewCollectPage } from './pages/NewCollectPage';
 import { WastePage } from './pages/WastePage';
 import { WasteRegisterPage } from './pages/WasteRegisterPage';
 import { SearchPointPage } from './pages/SearchPointPage';
+import { RegistrationPage } from './pages/RegistrationPage';
 
 function Routes() {
   return (
     <Router>
       <ReactRoutes>
         <Route path="/*" element={<LoginPage />} />
+        <Route path="/registration" element={<RegistrationPage />} />
         <Route path="/dashboard" element={<UserAreaPage />} />
         <Route path="/newCollect" element={<NewCollectPage />} />
         <Route path="/waste" element={<WastePage />} />
