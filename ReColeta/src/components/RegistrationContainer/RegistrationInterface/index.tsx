@@ -105,7 +105,7 @@ export const RegistrationInterface = () => {
         </div>
 
         <div>
-          <span>Escolha a função* :</span>
+          <span>Escolha sua função* :</span>
 
           <div className="registration-form-icons-row">
             <WasteProducerIcon onSelect={handleSelectRole} />
