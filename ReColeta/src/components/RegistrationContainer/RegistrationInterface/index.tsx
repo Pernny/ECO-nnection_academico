@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { registerUser } from "../../../api/apiClient";
+import { WasteProducerIcon } from "../InteractiveIcons/WasteProducerIcon";
+import { WasteCollectorIcon } from "../InteractiveIcons/WasteCollectorIcon";
 
 export const RegistrationInterface = () => {
   const [email, setEmail] = useState('');
@@ -14,16 +16,29 @@ export const RegistrationInterface = () => {
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
 
+  const handleSelectRole = (role: string) => {
+    setSelectedRole(role);
+    setError(null);
+  };
+
   const handleRegistration = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!email.trim() || !password.trim()) {
-      setError('Por favor, preencha todos os campos.');
+    if (!email.trim() || !password.trim() || !selectedRole) {
+      setError('Por favor, preencha todos os campos com * e selecione um papel.');
+      return;
+    }
+    if (!selectedRole) {
+      setError('Por favor, selecione um papel.');
       return;
     }
 
     try {
       setError(null);
+
+      // Log the data before sending
+      console.log('Registration Data:', { email, password, firstName, lastName, role: selectedRole });
+
       // Assuming you have additional fields like firstName and lastName
       await registerUser({ email, password, firstName, lastName });
       navigate('/dashboard');
@@ -88,14 +103,15 @@ export const RegistrationInterface = () => {
             onChange={(e) => setLastName(e.target.value)}
           />
         </div>
+
         <div>
-          <span>Escolha a função:</span>
-          <select
-            value={selectedRole}
-            onChange={(e) => setSelectedRole(e.target.value)}
-          >
-            <option value="ROLE_USER">Usuário Padrão</option>
-          </select>
+          <span>Escolha a função* :</span>
+
+          <div className="registration-form-icons-row">
+            <WasteProducerIcon onSelect={handleSelectRole} />
+            <WasteCollectorIcon onSelect={handleSelectRole} />
+          </div>
+
         </div>
         <div className="registration-button">
           <button type="submit" className="button">

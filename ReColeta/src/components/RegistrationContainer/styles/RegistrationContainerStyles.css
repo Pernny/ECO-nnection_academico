@@ -115,6 +115,10 @@
 
 }
 
+.registration-form-icons-row {
+  display: flex;
+}
+
 
 
 .registration-form input::placeholder {
