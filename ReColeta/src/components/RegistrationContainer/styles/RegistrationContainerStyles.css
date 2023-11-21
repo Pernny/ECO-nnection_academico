@@ -81,7 +81,7 @@
   display: relative;
   flex-direction: column;
   text-align: center;
-  width: 100%;
+  width: 300px;
 
 }
 
@@ -111,7 +111,8 @@
   font-weight: 400;
   margin-left: 8px;
   text-align: justify;
-  width: 92%;
+  width: fit-content;
+  padding: 0 auto;
 
 }
 

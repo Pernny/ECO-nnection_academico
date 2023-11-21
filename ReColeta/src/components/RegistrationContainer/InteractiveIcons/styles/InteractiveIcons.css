@@ -8,24 +8,11 @@
   justify-content: center;
   border: 1px solid var(--light-medium-gray);
   width: 9.5rem;
-  margin: 0.15rem 0.15rem 0.15rem 0.15rem;
+  margin: 0.15rem;
 }
 
-.icon-container-waste-collector:hover {
-  background-color: var(--primary-green);
-  cursor: pointer;
-  box-shadow: var(--container-box-shadow);
-  border: 1px solid var(--primary-green);
 
-}
 
-.icon-container-waste-collector:active {
-  background-color: var(--primary-green);
-  cursor: pointer;
-  box-shadow: var(--container-box-shadow);
-  border: 1px solid var(--primary-green);
-
-}
 
 .icon-image-waste-collector {
   width: 2.5rem;
@@ -45,14 +32,33 @@
   font-weight: 300;
   color: var(--light-medium-gray);
   margin: 0 0.5rem 0.5rem;
+  height: 80px;
+}
+
+.icon-container-waste-collector:hover,
+.icon-container-waste-collector:active {
+  background-color: var(--primary-blue);
+  cursor: pointer;
+  box-shadow: var(--container-box-shadow);
+  border: 1px solid var(--primary-blue);
 }
 
 .icon-container-waste-collector:hover .icon-title-waste-collector,
 .icon-container-waste-collector:hover .icon-text-description-waste-collector {
-  color: var(--quaternary-green);
+  color: var(--quaternary-blue);
 }
 
+.icon-container-waste-collector.active {
+  background-color: var(--primary-blue);
+  cursor: pointer;
+  box-shadow: var(--container-box-shadow);
+  border: 1px solid var(--primary-blue);
+}
 
+.icon-container-waste-collector.active .icon-title-waste-collector,
+.icon-container-waste-collector.active .icon-text-description-waste-collector {
+  color: var(--quaternary-blue);
+}
 
 
 .icon-container-waste-producer {
@@ -74,18 +80,25 @@
 
 }
 
-.icon-container-waste-producer:active {
-  background-color: var(--primary-orange);
-  cursor: pointer;
-  box-shadow: var(--container-box-shadow);
-  border: 1px solid var(--primary-orange);
-
-}
-
 .icon-container-waste-producer:hover .icon-title-waste-producer,
 .icon-container-waste-producer:hover .icon-text-description-waste-producer {
   color: var(--quaternary-orange);
 }
+
+
+.icon-container-waste-producer.active {
+  background-color: var(--primary-orange);
+  cursor: pointer;
+  box-shadow: var(--container-box-shadow);
+  border: 1px solid var(--primary-orange);
+}
+
+.icon-container-waste-producer.active .icon-title-waste-producer,
+.icon-container-waste-producer.active .icon-text-description-waste-producer {
+  color: var(--quaternary-orange);
+}
+
+
 
 .icon-image-waste-producer {
   width: 2.5rem;
@@ -95,7 +108,7 @@
 
 .icon-title-waste-producer {
   font-size: var(--primary-font-size);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--light-medium-gray);
 }
 
@@ -104,4 +117,5 @@
   font-weight: 300;
   color: var(--light-medium-gray);
   margin: 0 0.5rem 0.5rem;
+  height: 80px;
 }

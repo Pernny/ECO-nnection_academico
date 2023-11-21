@@ -11,12 +11,14 @@ export const RegistrationInterface = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [selectedRole, setSelectedRole] = useState('ROLE_USER');
+  const [activeRole, setActiveRole] = useState<string | null>(null);
 
 
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
 
   const handleSelectRole = (role: string) => {
+    setActiveRole(role);
     setSelectedRole(role);
     setError(null);
   };
@@ -108,8 +110,8 @@ export const RegistrationInterface = () => {
           <span>Escolha sua função* :</span>
 
           <div className="registration-form-icons-row">
-            <WasteProducerIcon onSelect={handleSelectRole} />
-            <WasteCollectorIcon onSelect={handleSelectRole} />
+            <WasteProducerIcon onSelect={handleSelectRole} isActive={activeRole === 'ROLE_USER'} />
+            <WasteCollectorIcon onSelect={handleSelectRole} isActive={activeRole === 'ROLE_COLLECTOR'} />
           </div>
 
         </div>

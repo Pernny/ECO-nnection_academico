@@ -1,34 +1,26 @@
-import { useState } from 'react'
 import '../styles/InteractiveIcons.css'
 import WasteCollectorIconDefault from '../../../../assets/img/RegisterArea/RecyclingTruck.png'
 import WasteCollectorIconActive from '../../../../assets/img/RegisterArea/RecyclingTruckWhite.png'
 
 interface IconProps {
   onSelect: (role: string) => void;
+  isActive: boolean;
 }
 
-export const WasteCollectorIcon: React.FC<IconProps> = ({ onSelect }) => {
-  const [isActive, setIsActive] = useState(false);
+export const WasteCollectorIcon: React.FC<IconProps> = ({ onSelect, isActive }) => {
 
-  const handleMouseEnter = () => {
-    setIsActive(true);
-  };
 
-  const handleMouseLeave = () => {
-    setIsActive(false);
-  };
+
 
   const handleClick = () => {
-    setIsActive(true);
-    onSelect('ROLE_USER');
+    onSelect('ROLE_COLLECTOR');
   };
 
   return (
     <div
       className={`icon-container-waste-collector ${isActive ? 'active' : ''}`}
       onClick={handleClick}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+
     >
       <p className="icon-title-waste-collector">Coletor de Resíduos</p>
       <img
