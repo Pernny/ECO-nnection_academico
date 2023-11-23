@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { registerUser } from "../../../api/apiClient";
 import { WasteProducerIcon } from "../InteractiveIcons/WasteProducerIcon";
 import { WasteCollectorIcon } from "../InteractiveIcons/WasteCollectorIcon";
+import { useAuth } from "../../../context/AuthContext";
 
 export const RegistrationInterface = () => {
   const [email, setEmail] = useState('');
@@ -12,10 +13,9 @@ export const RegistrationInterface = () => {
   const [lastName, setLastName] = useState('');
   const [selectedRole, setSelectedRole] = useState('ROLE_USER');
   const [activeRole, setActiveRole] = useState<string | null>(null);
-
-
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
+  const { login } = useAuth(); // Use the login function from the AuthContext
 
   const handleSelectRole = (role: string) => {
     setActiveRole(role);
@@ -39,10 +39,16 @@ export const RegistrationInterface = () => {
       setError(null);
 
       // Log the data before sending
-      console.log('Registration Data:', { email, password, firstName, lastName, role: selectedRole });
 
-      // Assuming you have additional fields like firstName and lastName
-      await registerUser({ email, password, firstName, lastName });
+      const response = await registerUser({ email, password, firstName, lastName });
+      console.log('Registration Data:', { email, password, firstName, lastName, role: selectedRole, response: response.data.id });
+
+      // Store user ID in localStorage after successful registration
+      localStorage.setItem('userId', String(response.data.id));
+
+      const token = response.data.token;
+      login(token); // Use the login function from the AuthContext to set the token
+
       navigate('/dashboard');
     } catch (error: any) {
       setError('Erro ao cadastrar usuário. Por favor, tente novamente.');

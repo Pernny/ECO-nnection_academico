@@ -1,34 +1,50 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom"
 import { loginUser } from "../../../api/apiClient";
+import { useAuth } from "../../../context/AuthContext";
 
 
 export const LoginInterface = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null); // State to store error message
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const { login } = useAuth();
+
   const navigate = useNavigate();
+
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Check if email or password is empty
     if (!email.trim() || !password.trim()) {
-      setError('Por favor, preencha todos os campos.'); // Set error message
+      setError('Por favor, preencha todos os campos.');
       return;
     }
 
     try {
-      setError(null); // Clear previous errors
+      setError(null);
       const response = await loginUser({ email, password });
+      console.log('Login Response:', response);
+
+      const loggedInUserId = response.data.userId;
+      console.log('Logged in user ID:', loggedInUserId);
+      console.log('Authentication data:', response.data?.authentication);
+
       const token = response.data.token;
-      localStorage.setItem('token', token);
+      console.log('Token:', token);
+      console.log('isAuthenticated:', isAuthenticated);
+
+      // Store user ID in localStorage
+      localStorage.setItem('userId', String(loggedInUserId));
+
       navigate('/dashboard');
     } catch (error: any) {
       setError('Credenciais inválidas. Por favor, tente novamente.');
       console.error('Login error:', error.message);
     }
   };
+
 
   return (
     <div className="login-box">

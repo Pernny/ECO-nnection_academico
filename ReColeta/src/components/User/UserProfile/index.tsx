@@ -5,22 +5,50 @@ import { useEffect, useState } from "react";
 import { getUserById } from "../../../api/apiClient";
 import { ServerUserData } from "../../../Types/SystemComponentsTypes/UserRegistrationData";
 
+
+
+
 export const UserProfile = () => {
   const [userData, setUserData] = useState<ServerUserData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Check if userData exists and has an id before making the API call
-    if (userData && userData.id) {
-      getUserById(userData.id)
-        .then(response => setUserData(response.data))
-        .catch(error => console.error('Error fetching user data:', error));
+    const userId = localStorage.getItem('userId');
+
+    if (!userId) {
+      setError('User ID not found.');
+      return;
     }
-  }, [userData]);
+
+    const fetchUserData = async () => {
+      try {
+        const response = await getUserById(Number(userId));
+        setUserData(response.data);
+      } catch (error) {
+        setError('Error fetching user data.');
+      }
+    };
+
+    fetchUserData();
+  }, []);
+
+  // Function to update user data
+  const updateUser = async (userId: number) => {
+    try {
+      const response = await getUserById(userId);
+      setUserData(response.data);
+    } catch (error) {
+      console.error('Error updating user data:', error);
+    }
+  };
+
 
   return (
     <ContainerContent>
       <ProfileHeader />
-      {userData && (
+      {loading && <p>Loading...</p>}
+      {!loading && userData && (
         <>
           <section className={styles["profile-section"]}>
             <div className={styles["profile-section-title"]}>
@@ -45,7 +73,7 @@ export const UserProfile = () => {
               </div>
               <div className={styles["profile-buttons"]}>
                 <button type="submit">Alterar senha</button>
-                <button type="submit">Editar perfil</button>
+                <button onClick={() => updateUser(userData?.id)}>Editar perfil</button>
               </div>
             </div>
           </section>

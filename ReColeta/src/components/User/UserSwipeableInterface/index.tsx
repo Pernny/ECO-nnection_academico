@@ -7,6 +7,7 @@ import { UserResidues } from '../UserResidues';
 import { UserActionsAndDemands } from '../UserActionAndDemandsSection';
 import { UserAreaDotMenu } from '../../System/DotMenu/UserAreaDotMenu';
 
+
 export const UserSwipeableInterface = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 

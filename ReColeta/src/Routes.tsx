@@ -7,6 +7,7 @@ import { WastePage } from './pages/WastePage';
 import { WasteRegisterPage } from './pages/WasteRegisterPage';
 import { SearchPointPage } from './pages/SearchPointPage';
 import { RegistrationPage } from './pages/RegistrationPage';
+import { ReportPage } from './pages/reports';
 
 function Routes() {
   return (
@@ -19,6 +20,7 @@ function Routes() {
         <Route path="/waste" element={<WastePage />} />
         <Route path="/wasteRegister" element={<WasteRegisterPage />} />
         <Route path="/searchPoint" element={<SearchPointPage />} />
+        <Route path="/reports" element={<ReportPage />} />
         {/* Define other routes as needed */}
       </ReactRoutes>
     </Router>
