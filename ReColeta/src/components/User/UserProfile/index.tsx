@@ -43,13 +43,13 @@ export const UserProfile = () => {
     }
   };
 
-
+  console.log('User data:', userData);
 
   return (
     <ContainerContent>
       <ProfileHeader />
-      {loading && <p>Loading...</p>}
-      {!loading && userData && (
+      {!loading && <p>Loading...</p>}
+      {loading && userData && (
         <>
           <section className={styles["profile-section"]}>
             <div className={styles["profile-section-title"]}>
