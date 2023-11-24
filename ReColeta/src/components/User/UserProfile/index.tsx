@@ -2,7 +2,7 @@ import { ContainerContent } from "../../System/Containers/ContainerContent"
 import { ProfileHeader } from "./ProfileHeader"
 import styles from '../../../style/userArea.module.css'
 import { useEffect, useState } from "react";
-import { getUserById } from "../../../api/apiClient";
+import { getUserById, setAuthToken } from "../../../api/apiClient";
 import { ServerUserData } from "../../../Types/SystemComponentsTypes/UserRegistrationData";
 
 
@@ -42,6 +42,7 @@ export const UserProfile = () => {
       console.error('Error updating user data:', error);
     }
   };
+
 
 
   return (

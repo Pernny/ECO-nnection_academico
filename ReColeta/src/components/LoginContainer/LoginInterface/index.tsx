@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom"
 import { loginUser } from "../../../api/apiClient";
-import { useAuth } from "../../../context/AuthContext";
 
 
 export const LoginInterface = () => {
@@ -9,7 +8,7 @@ export const LoginInterface = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null); // State to store error message
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const { login } = useAuth();
+
 
   const navigate = useNavigate();
 
