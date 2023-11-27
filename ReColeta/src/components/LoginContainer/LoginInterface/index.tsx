@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom"
 import { loginUser } from "../../../api/apiClient";
-
+import Cookies from 'js-cookie';
 
 export const LoginInterface = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null); // State to store error message
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-
+  console.log("isAuthenticated:", setIsAuthenticated)
 
   const navigate = useNavigate();
 
@@ -25,19 +25,29 @@ export const LoginInterface = () => {
       setError(null);
       const response = await loginUser({ email, password });
       console.log('Login Response:', response);
+      console.log(response.data.userId);
+
 
       const loggedInUserId = response.data.userId;
       console.log('Logged in user ID:', loggedInUserId);
       console.log('Authentication data:', response.data?.authentication);
 
-      const token = response.data.token;
+      const token = Cookies.get('JSESSIONID');
       console.log('Token:', token);
       console.log('isAuthenticated:', isAuthenticated);
 
       // Store user ID in localStorage
       localStorage.setItem('userId', String(loggedInUserId));
+      localStorage.setItem('token', String(token));
 
-      navigate('/dashboard');
+
+      if (response.data.userId === 1) {
+        navigate('/reports');
+      } else {
+        navigate('/dashboard');
+      }
+
+
     } catch (error: any) {
       setError('Credenciais inválidas. Por favor, tente novamente.');
       console.error('Login error:', error.message);

@@ -14,6 +14,7 @@ export const Header = () => {
     const userId = localStorage.getItem('userId');
 
     if (!userId) {
+      setLoading(!loading);
       setError('User ID not found.');
       return;
     }
@@ -26,6 +27,7 @@ export const Header = () => {
         setError('Error fetching user data.');
       }
     };
+    console.log(error)
 
     fetchUserData();
   }, []);

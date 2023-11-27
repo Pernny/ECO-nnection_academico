@@ -110,7 +110,7 @@ export const RegistrationInterface = () => {
           <span>Escolha sua função* :</span>
 
           <div className="registration-form-icons-row">
-            <WasteProducerIcon onSelect={handleSelectRole} isActive={activeRole === 'ROLE_USER'} />
+            <WasteProducerIcon onSelect={handleSelectRole} isActive={activeRole === 'ROLE_PRODUCER'} />
             <WasteCollectorIcon onSelect={handleSelectRole} isActive={activeRole === 'ROLE_COLLECTOR'} />
           </div>
 

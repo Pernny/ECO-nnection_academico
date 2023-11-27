@@ -7,7 +7,7 @@ import { WastePage } from './pages/WastePage';
 import { WasteRegisterPage } from './pages/WasteRegisterPage';
 import { SearchPointPage } from './pages/SearchPointPage';
 import { RegistrationPage } from './pages/RegistrationPage';
-import { ReportPage } from './pages/reports';
+import { ReportPage } from './pages/ReportScreenPage';
 
 function Routes() {
   return (

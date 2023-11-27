@@ -8,6 +8,14 @@ body {
   background: linear-gradient(circle, white, #7ee3fa);
 }
 
+@media screen and (min-width: 601px) {
+  .interface-screen-adapter {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+}
+
 /* Start of First Content Styles */
 .profile-header p {
   color: var(--medium-gray);

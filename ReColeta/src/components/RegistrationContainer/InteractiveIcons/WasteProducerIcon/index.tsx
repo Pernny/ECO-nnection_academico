@@ -12,7 +12,7 @@ export const WasteProducerIcon: React.FC<IconProps> = ({ onSelect, isActive }) =
 
 
   const handleClick = () => {
-    onSelect('ROLE_USER');
+    onSelect('ROLE_PRODUCER');
   };
 
 
